@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Simple js game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <img src="res/stick-figure.png" alt="You" id="player">
+  <div class="ground"></div>
+  <div class="main-score">Score: <span class="score">0</span></div>
+  <div class="curtain">
+    <h1 class="end-title">You died</h1>
+    <h2 class="end-score">Your Score: <span class="score">0</span></h2>
+    <input class="end-restart" type="button" value="Try Again" onclick="location.reload()"></button>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

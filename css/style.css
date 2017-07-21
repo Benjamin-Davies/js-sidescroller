@@ -1,0 +1,102 @@
+body {
+  overflow: hidden;
+  background: skyblue;
+}
+
+#player {
+  height: 20vmin;
+  position: absolute;
+  left: 0;
+  bottom: 10vmin;
+  animation: jump 1s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 10vmin;
+  }
+  50% {
+    bottom: 30vmin;
+  }
+  100% {
+    bottom: 10vmin;
+  }
+}
+
+.ground {
+  background-color: greenyellow;
+  height: 10vmin;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.obstacle {
+  background-color: orange;
+  height: 5vmin;
+  width: 10vmin;
+  position: absolute;
+  left: 0;
+  bottom: 5vmin;
+  animation: move 2s linear;
+}
+
+@keyframes move {
+  0% {
+    left: 90vmin;
+  }
+  100% {
+    left: -10vmin;
+  }
+}
+
+.main-score {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 10px;
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+.curtain {
+  background: crimson;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: curtain-drop 1s ease-out;
+  animation-play-state: paused; 
+  z-index: 3;
+  text-align: center;
+  margin: auto;
+}
+
+@keyframes curtain-drop {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.end-title {
+  font-size: 20vmin;
+  color: deeppink;
+}
+
+.end-score {
+  font-size: 5vmin;
+  color: white;
+}
+
+.end-restart {
+  font-size: 10vmin;
+  background: #96B3D3;
+  color: #585858;
+  border: 2px solid #646464;
+}
