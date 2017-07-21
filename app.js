@@ -10,7 +10,6 @@ function jump() {
     // reset when done
     setTimeout(function () {
       player.style.animationPlayState = 'paused';
-      player.style.bottom = '10vh';
       jumping = false;
     }, 1000);
   }
@@ -97,6 +96,8 @@ function dropCurtains() {
  */
 function update() {
   requestAnimationFrame(update);
+  if (!jumping)
+      player.style.bottom = '10vh';
   if (checkForCollisions() && playing) {
     dropCurtains();
     playing = false;
